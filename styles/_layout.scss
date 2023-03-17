@@ -1,0 +1,30 @@
+#header{
+    color: var(--primary-color);
+    background-image: url('/resources/home.jpg');
+    background-size: cover;
+    padding:1rem 0;
+    @include responsive($lg){
+        filter: brightness(90%);
+    }
+}
+
+#main{
+   @include responsive($lg){
+    & section:not(.properties, .about){
+        margin: 4rem;
+       } 
+   }
+}
+
+#footer{
+    margin: 5rem 0;
+    border-top: 1px solid var(--tertiary-color);
+}
+
+
+.l-align-center{
+    text-align: center;
+}
+.l-display-grid{
+    display: grid;
+}
