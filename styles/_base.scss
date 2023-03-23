@@ -9,10 +9,11 @@ ul{list-style-type: none;}
 button{
     border: transparent;
     text-transform: inherit;
+    cursor: pointer;
 }
 
 
-input,textarea,select{
+input,select{
     font-size: inherit;
     font-family: inherit;
     border: transparent;

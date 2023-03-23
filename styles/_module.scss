@@ -61,7 +61,7 @@
             width: 70%;
         }
     }
-    &__type{
+    &__room{
         padding-top: 1rem;
         font-size: 0.9em;
         font-weight: 300;
@@ -284,11 +284,11 @@
     &__top{
         display: flex;
         justify-content: space-around;
+        margin: 2rem 0;
         @include responsive($lg){
             width: 85vw;
             justify-content: space-between;
             margin-inline: auto;
-            margin-bottom: 2rem;
         }
         button{
             @include responsive($lg){
@@ -433,7 +433,27 @@
 }
 //////////////////////////////////////////////////
 //SIGNIN
-
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+.modal{
+    display: flex;
+    font-family: cursive;
+    color:var(--primary-color);
+    background-color: #333;
+    width: fit-content;
+    margin-inline: auto;
+    padding: 0.3rem;
+    border-radius: 10px;
+    position: absolute;
+}
+.modal--animated{
+    animation: animatebottom 0.5s ease-in;
+}
+@keyframes animatebottom{
+    0%{transform: translateY(-60px);}
+}
 .signin{
     margin: 1rem;
     border: 1px solid var(--border-color);
@@ -469,7 +489,7 @@
         }
     }
 
-    input, select, textarea{
+    input, select{
         width: 90%;
         margin-bottom: 1rem;
         padding: 1rem;
@@ -477,12 +497,9 @@
         border-radius: var(--sm-border-radius);
     }
 
-    & textarea{
+    & input[type=file]{
         border: dashed 2px var(--tertiary-color);
         text-align: center;
-        @include responsive($lg){
-        
-        }
     }
 
     &__btn__container{
