@@ -59,5 +59,5 @@ let openModal = () =>{
     setTimeout(()=>{
         modal.classList.add('hidden');
         modal.classList.remove('modal--animated')
-    },800);
+    },1000);
 }
