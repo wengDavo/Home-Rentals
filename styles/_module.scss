@@ -33,16 +33,17 @@
 .card{
     font-family: 'DM Sans';
     margin-inline:auto;
-    width: 250.73px;
+    width: 200.73px;
     height: 300.2px;
     @include responsive($lg){
         width: 300px;
         height: 450px;
+        border-radius: 30px;
     }
     border: 2px solid var(--alt-border-color);
     box-shadow: var(--simple-shadow);
     margin-bottom: 1rem;
-    border-radius: 30px 30px 0 0;
+    border-radius: 10px;
     position: relative;
 
     &__image img{
@@ -240,11 +241,14 @@
 
     h2{
         line-height: 1.5;
+        margin: 4rem;
     }
 
     &__container{
         @include responsive($lg){
             display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -300,7 +304,8 @@
 
     &__main{
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: repeat(2, 50%);
+        gap: 1rem;
         grid-template-rows: auto;
         @include responsive($lg){
             gap: 5rem;

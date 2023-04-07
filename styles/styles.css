@@ -68,7 +68,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  #main section:not(.properties, .about) {
+  #main section:not(.about) {
     margin: 4rem;
   }
 }
@@ -120,18 +120,19 @@ body {
 .card {
   font-family: "DM Sans";
   margin-inline: auto;
-  width: 250.73px;
+  width: 200.73px;
   height: 300.2px;
   border: 2px solid var(--alt-border-color);
   box-shadow: var(--simple-shadow);
   margin-bottom: 1rem;
-  border-radius: 30px 30px 0 0;
+  border-radius: 10px;
   position: relative;
 }
 @media (min-width: 1024px) {
   .card {
     width: 300px;
     height: 450px;
+    border-radius: 30px;
   }
 }
 .card__image img {
@@ -327,10 +328,13 @@ body {
 }
 .hero h2 {
   line-height: 1.5;
+  margin: 4rem;
 }
 @media (min-width: 1024px) {
   .hero__container {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .hero__icons {
@@ -386,7 +390,8 @@ body {
 }
 .properties__main {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(2, 50%);
+  gap: 1rem;
   grid-template-rows: auto;
 }
 @media (min-width: 1024px) {

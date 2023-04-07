@@ -10,7 +10,7 @@
 
 #main{
    @include responsive($lg){
-    & section:not(.properties, .about){
+    & section:not(.about){
         margin: 4rem;
        } 
    }
