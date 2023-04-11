@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Home Rentals</title>
+</head>
+<body>
+    <header id="header">
+        <section>
+            <figure>
+                <img src="{% static 'resources/home.jpg' %}" alt="" class="header__background-image">
+            </figure>
+        </section>
+        <section class="header__top-container">
+            <figure class="header__logo">
+                <img src="{% static 'resources/logo.png' %}" alt="logo" width="73px" height="25px">
+            </figure>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Landlord</a></li>
+                    <li><a href="">Tenants</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class=" header__main-container l-align-center l-display-grid">
+            <div>
+                <p class="header__text">The Most Affordable Place To Stay In The San Francisco Bay Area</p>
+            </div>
+            <div>
+                <figure class="header__map">
+                    <img src="{% static 'resources/map.png' %}" alt="" height="250px" width="250px">
+                </figure>
+                <article class="header__dropdown">
+                    <button class="btn-large">All Type <img src="{% static 'resources/dropdown.png' %}" alt="dropdown"></button>
+                    <button class="btn-large">Neighbourhood <img src="{% static 'resources/dropdown.png' %}" alt="dropdown"></button>
+                    <button class="btn-small"><img src="{% static 'resources/search.png' %}" alt="search"></button>
+                </article>
+            </div>
+        </section>
+    </header>
+    <main id="main">
+        <section class="hero">
+            <h2 class="title"><span class="underlined">minimum living cost</span> takes care of everything</h2>
+            <div class="hero__container">
+                <figure class="hero__image">
+                    <img src="{% static 'resources/hero.png' %}" alt="hero image" width="250px" height="250px">
+                </figure>
+                <aside class="hero__icons-container">
+                    <figure>
+                        <img src="{% static 'resources/icon_cash.svg' %}" alt="icon" height="35px" width="35px" class="hero__icons">
+                        <figcaption style="width: 12ch;">pay as little as possible!</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="{% static 'resources/icon_house.svg' %}" alt="icon" height="35px" width="35px" class="hero__icons">
+                        <figcaption style="width: 14ch;">enjoy wisdom of cummunity!</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="{% static 'resources/icon_stacks.svg' %}" alt="icon" height="35px" width="35px" class="hero__icons">
+                        <figcaption>let somebody else take care of the landlord!</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="{% static 'resources/icon_plant.svg' %}" alt="icon" height="35px" width="35px" class="hero__icons">
+                        <figcaption>enjoy a peaceful environment</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="{% static 'resources/icon_shield.svg' %}" alt="icon" height="35px" width="35px" class="hero__icons">
+                        <figcaption style="width:12ch;">stay safe save money</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="{% static 'resources/icon_ball.svg' %}" alt="icon" height="35px" width="35px" class="hero__icons">
+                        <figcaption style="width: 12ch;">pay for what you use</figcaption>
+                    </figure>
+                </aside>
+            </div>
+        </section>
+        <section class="properties">
+            <article class="properties__top">
+                <h2 class="title"><span class="underlined">list o</span>f properties</h2>
+                <button class="btn-normal">view all property</button>
+            </article>
+            <article class="properties__container slide">
+                    <div class="card">
+                        <figure class="card__image">
+                            <img src="{% static 'resources/card_1.png' %}" alt="a house" width="150px" height="150px">
+                        </figure>
+                        <div class="card__info">
+                            <p class="card__address">
+                                Shinjuku, 8680 kishiki street, <br>
+                                Tokyo
+                            </p>
+                            <p class="card__room">Super Deluxe Rooms</p>
+                            <p class="card__price">$3900/Month</p>
+                        </div>
+                        <aside class="card__icons">
+                            <ul>
+                                <li><i class="material-symbols-outlined subscript">bed</i><span class="card__bedroom">4</span></li>
+                                <li><i class="material-symbols-outlined subscript">shower</i><span class="card__bathroom">1</span></li>
+                                <li><i class="material-symbols-outlined subscript">tag</i><span class="card__housetype">3</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="card">
+                        <figure class="card__image">
+                            <img src="{% static 'resources/card_2.png' %}" alt="a house" width="150px" height="150px">
+                        </figure>
+                        <div class="card__info">
+                            <p class="card__address">
+                                san francisco, 2578 folsom street, <br>
+                                Califronia
+                            </p>
+                            <p class="card__room">Private Rooms</p>
+                            <p class="card__price">$1100/Month</p>
+                        </div>
+                        <aside class="card__icons">
+                            <ul>
+                                <li><i class="material-symbols-outlined subscript">bed</i><span class="card__bedroom">1</span></li>
+                                <li><i class="material-symbols-outlined subscript">shower</i><span class="card__bathroom">3</span></li>
+                                <li><i class="material-symbols-outlined subscript">tag</i><span class="card__housetype">2</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="card">
+                        <figure class="card__image">
+                            <img src="{% static 'resources/card_3.png' %}" alt="a house" height="150px" width="150px">
+                        </figure>
+                        <div class="card__info">
+                            <p class="card__address">
+                                Manhattan, 6731 berger avenue, <br>
+                                New York
+                            </p>
+                            <p class="card__room">Deluxe Rooms</p>
+                            <p class="card__price">$2100/Month</p>
+                        </div>
+                        <aside class="card__icons">
+                            <ul>
+                                <li><i class="material-symbols-outlined subscript">bed</i><span class="card__bedroom">3</span></li>
+                                <li><i class="material-symbols-outlined subscript">shower</i><span class="card__bathroom">2</span></li>
+                                <li><i class="material-symbols-outlined subscript">tag</i><span class="card__housetype">1</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="card">
+                        <figure class="card__image">
+                            <img src="{% static 'resources/card_4.png' %}" alt="a house" height="150px" width="150px">
+                        </figure>
+                        <div class="card__info">
+                            <p class="card__address">
+                                Toronto, 9731 reigns street, <br>
+                                Ontario
+                            </p>
+                            <p class="card__room">Private Rooms</p>
+                            <p class="card__price">$1900/Month</p>
+                        </div>
+                        <aside class="card__icons">
+                            <ul>
+                                <li><i class="material-symbols-outlined subscript">bed</i><span class="card__bedroom">5+</span></li>
+                                <li><i class="material-symbols-outlined subscript">shower</i><span class="card__bathroom">4</span></li>
+                                <li><i class="material-symbols-outlined subscript">tag</i><span class="card__housetype">2</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="card">
+                        <figure class="card__image">
+                            <img src="{% static 'resources/card_5.png' %}" alt="a house" height="150px" width="150px">
+                        </figure>
+                        <div class="card__info">
+                            <p class="card__address">
+                                Maitama, 9379 nduka street, <br>
+                                Abuja
+                            </p>
+                            <p class="card__room">Private Rooms</p>
+                            <p class="card__price">$2000/Month</p>
+                        </div>
+                        <aside class="card__icons">
+                            <ul>
+                                <li><i class="material-symbols-outlined subscript">bed</i><span class="card__bedroom">1</span></li>
+                                <li><i class="material-symbols-outlined subscript">shower</i><span class="card__bathroom">2</span></li>
+                                <li><i class="material-symbols-outlined subscript">tag</i><span class="card__housetype">2</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="card">
+                        <figure class="card__image">
+                            <img src="{% static 'resources/card_6.png' %}" alt="a house" height="150px" width="150px">
+                        </figure>
+                        <div class="card__info">
+                            <p class="card__address">
+                                Rayfield, 9083 district street, <br>
+                                Jos
+                            </p>
+                            <p class="card__room">private room</p>
+                            <p class="card__price">$1200/Month</p>
+                        </div>
+                        <aside class="card__icons">
+                            <ul>
+                                <li><i class="material-symbols-outlined subscript">bed</i><span class="card__bedroom">3</span></li>
+                                <li><i class="material-symbols-outlined subscript">shower</i><span class="card__bathroom">2</span></li>
+                                <li><i class="material-symbols-outlined subscript">tag</i><span class="card__housetype">1</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    {% for prop in properties%}
+                    <div class="card">
+                        <figure class="card__image">
+                            <img src="{{ prop.image }}" alt="a house" height="150px" width="150px">
+                        </figure>
+                        <div class="card__info">
+                            <p class="card__address">
+                                {{ prop.city }}, {{ prop.address }}
+                                <br>{{ prop.state }}
+                            </p>
+                            <p class="card__room">{{ prop.room_type }} Room</p>
+                            <p class="card__price">${{ prop.price }}/Month</p>
+                        </div>
+                        <aside class="card__icons">
+                            <ul>                                
+                                <li><i class="material-symbols-outlined subscript">bed</i><span class="card__bedroom">{{ prop.bedrooms }}</span></li>
+                                <li><i class="material-symbols-outlined subscript">shower</i><span class="card__bathroom">{{ prop.bathrooms }}</span></li>
+                                <li><i class="material-symbols-outlined subscript">tag</i><span class="card__housetype">{{ prop.house_type }}</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    {% endfor %}
+            </article>
+            <article class="properties__navigation">
+                <ul>
+                    <li><button class="prev-btn">prev</button></li>
+                    <li><button class="first-btn">1</button></li>
+                    <li><button class="second-btn">2</button></li>
+                    <li><button class="third-btn">3</button></li>
+                    <li><button class="next-btn">next</button></li>
+                </ul>
+            </article>
+        </section>
+        <section class="form">
+            <article class="form__top">
+                <div class="form__images">
+                    <figure>
+                        <img src="{% static 'resources/square1.jpg' %}" alt="form pictures" width="125px" height="167px">
+                        <figcaption>flexible leases</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="{% static 'resources/square2.jpg' %}" alt="form pictures" width="135px" height="135px">
+                        <figcaption>7-day happiness gauranteed</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="{% static 'resources/square3.jpg' %}" alt="form picture" width="106px" height="142.5px">
+                        <figcaption>monthly house cleaning</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="{% static 'resources/square4.jpg' %}" alt="form picture" width="169px" height="178px">
+                        <figcaption>choose your own roommate</figcaption>
+                    </figure>
+                </div>
+                <div class="form__info">
+                    <h2 class="title--xl">flexibility and options to suit your lifestyle</h2>
+                    <p>You need it? We got it. We make finding your next home easy, comfortable, and simple. From our happiness guarantee to our selective roommate finder option. We provide you the flexibility that you most desire.</p>
+                    <button class="btn btn-normal">search button</button>
+                </div>
+            </article>
+            <article class="form__main l-align-center">
+                <h2 class="title--sm signin__title">your property with us and be confident that it will be advertised!</h2>
+                <!-- FORM -->
+                <form action="." name="propertyForm" class="signin" method="POSt" enctype="multipart/form-data">{% csrf_token %}
+                    <legend class="title">add a new property</legend>
+                    <fieldset class="fieldset">
+                        <div>
+                            <label for="name">Name Of Property<span class="orange">&#10033;</span></label>
+                            <input type="text" name="name" id="name" required placeholder="Enter Name of Property">
+                        </div>
+                        <div>
+                            <label for="address">Address<span class="orange">&#10033;</span></label>
+                            <input type="text" name="address" id="address" required placeholder="Enter Location of Property">
+                        </div>
+                        <div>
+                            <label for="price">Price<span class="orange">&#10033;</span></label>
+                            <input type="price" name="price" id="price"required placeholder="Enter Price of Property">
+                        </div>
+                        <div>  
+                        <label for="city">City<span class="orange">&#10033;</span></label>
+                        <select name="city" id="city" required>
+                            <option value="" disabled selected hidden>Select city</option>
+                            <option value="manhattan">Manhattan</option>
+                            <option value="asokoro">Asokoro</option>
+                            <option value="rayfield">Rayfield</option>
+                            <option value="mainland">Mainland</option>
+                            <option value="tokyo">Tokyo</option>
+                        </select>
+                        </div>
+                        <div>
+                            <label for="state">State<span class="orange">&#10033;</span></label>
+                            <select name="state" id="state" required>
+                                <option value="" disabled selected hidden>Select state</option>
+                                <option value="Toronto">Toronto</option>
+                                <option value="Abuja">Abuja</option>
+                                <option value="San-Francisco">San-Francisco</option>
+                                <option value="York">York</option>
+                                <option value="Kagos">Lagos</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="room">Room type<span class="orange">&#10033;</span></label>
+                            <select name="room" id="room" required>
+                                <option value="" disabled selected hidden>Select room type</option>
+                                <option value="private">Private Rooms</option>
+                                <option value="deluxe">Deluxe Rooms</option>
+                                <option value="super">Super Deluxe Rooms</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="bedrooms">Bedrooms<span class="orange">&#10033;</span></label>
+                            <select name="bedrooms" id="bedrooms" required>
+                                <option value="" disabled selected hidden>Select number of bedrooms</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="bathrooms">Bathrooms<span class="orange">&#10033;</span></label>
+                            <select name="bathrooms" id="bathrooms" required>
+                                <option value="" disabled selected hidden>Select number of bathrooms</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="housetype">House type<span class="orange">&#10033;</span></label>
+                            <select name="housetype" id="housetype" required>
+                                <option value="" disabled selected hidden>Select type of house</option>
+                                <option value="1">Detached</option>
+                                <option value="2">Semi-datcahed</option>
+                                <option value="3">Bungalow</option>
+                                <option value="4">Duplex</option>
+                                <option value="5+">Hotel/Motel</option>
+                            </select>
+                        </div>   
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <label for="description">Description<span class="orange">&#10033;</span></label>
+                        <input type="textarea" name="description" id="description" required placeholder="Description of Property">
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <label for="photos">Upload Property Photo<span class="orange">&#10033;</span></label>
+                        <input type="file" name="photos" id="photos" required value="image/*">
+                    </fieldset>
+                    <div class="signin__btn__container">
+                        <button class=" btn btn-normal" type="submit" value="save">add property</button>
+                    </div>
+                </form>
+                <!-- FORM -->
+                <section class="modal hidden">
+                    <p>property added</p>
+                </section>
+            </article>
+        </section>
+        <section class="about">
+            <article class="about__info">
+                <p class="about__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc facilisis, a commodo eros mollis. Nunc vel pellentesque est. Curabitur at odio sit amet libero vulputate efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa, faucibus id pretium ac, mattis eu velit. Donec sed risus a lacus fringilla finibus.
+                </p>
+                <figure class="about__img">
+                    <img src="{% static 'resources/about.png' %}" alt="profile picture">
+                    <p><span class="orange">harry wilson</span></p>
+                    <p>property owner</p>
+                </figure>
+                <div class="circle--container">
+                    <div class="circle orange--accent"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </article>
+            <article class="about__picture">
+                <figure>
+                    <img src="{% static 'resources/about_foreground.jpg' %}" alt="" width="212px" height="196px">
+                </figure>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">
+        <section class="footer__row-1">
+            <article class="footer__logo">
+                <p class="title--logo">Logo</p>
+            </article>
+            <article class="footer__icons">
+                <div>
+                    <i><img src="{% static 'resources/location.png' %}" alt="" class="icon">345 Faulconer Drive, Suite 4 • Charlottesville, CA, 12345</i></div>
+                <div>
+                    <i><img src="{% static 'resources/phone.png' %}" alt=""
+                        class="icon">(123) 456-7890</i>
+                    <i><img src="{% static 'resources/printer.png' %}" alt="" class="icon">(123) 456-7890</i>
+                </div>
+                <div>
+                    <span>social media</span>
+                    <i><img src="{% static 'resources/Facebook.svg' %}" alt="" class="icon"></i>
+                    <i><img src="{% static 'resources/Twitter.svg' %}" alt=""class="icon"></i>
+                    <i><img src="{% static 'resources/Pinterest.svg' %}" alt="" class="icon"></i>
+                </div>
+            </article>
+        </section>
+        <section class="footer__row-2">
+            <div class="footer__about">
+                <span>about us</span>
+                <span>contact us</span>
+                <span>help</span>
+                <span>privacy</span>
+                <span>disclaimer</span>
+            </div>
+            <div class="footer__copyright">Copyright © 2023 Minimumlivingcost. All rights reserved</div>
+        </section>
+    </footer>
+</body>
+<script src="{% static 'script/main.js' %}"></script>
+</html>

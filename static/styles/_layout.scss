@@ -1,0 +1,35 @@
+#header{
+    padding: 2rem ;
+    position: relative;
+    color: var(--primary-color);
+    @include responsive($lg){
+        filter: brightness(90%);
+    }
+}
+.header__background-image{
+    z-index: -1;
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100vw;
+    height: 70vh;
+    @include responsive($lg){
+        height: 100vh;
+    }
+}
+// MAIN
+#main{
+    padding: 2rem 0;
+}
+// FOOTER
+#footer{
+    margin: 5rem 0;
+    border-top: 1px solid var(--tertiary-color);
+}
+
+
+.l-align-center{
+    text-align: center;
+}
+.l-display-grid{
+    display: grid;
+}
