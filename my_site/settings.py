@@ -11,22 +11,25 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 import environ
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# ENV
 env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+environ.Env.read_env()
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: 
+# keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: 
+# don't run with debug turned on in production!
 DEBUG = False
 
+# HOST
 ALLOWED_HOSTS = ['*']
 
 # Application definition
@@ -70,12 +73,16 @@ TEMPLATES = [
     },
 ]
 
+
+# WSGI->WebServiceGatewayInterface
 WSGI_APPLICATION = 'my_site.wsgi.application'
 
-# DATABSES
+
+# POSTRGREs-DATABSE
 DATABASES = {
-    "default": env.db_url("DATABASE_URL")
+    "default": dj_database_url.parse(env('DATABASE_URL'))
 }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -95,8 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -105,9 +110,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+# Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
@@ -115,6 +119,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
 # Base URL to serve media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / '/media/'
