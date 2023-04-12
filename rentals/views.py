@@ -1,21 +1,13 @@
 from django.shortcuts import render
 from . models import Properties
 from django.http import HttpResponseRedirect
-from django.core.files.storage import FileSystemStorage
-
 
 def homepage_view(request):
      context = {
           "properties":Properties.objects.all()
      }
      if request.method == "POST":
-         accepted_format = request.FILES['photos'].name[-3:].lower() in ['jpg', 'png']
-         if accepted_format:
-               form = request.POST
-               photo = request.FILES['photos']
-               file = FileSystemStorage().save(photo.name, photo)
-               file_url = FileSystemStorage().url(file)
-               
+               form = request.POST        
                Properties.objects.create(
                     name = form['name'],
                     address = form['address'],
@@ -27,7 +19,6 @@ def homepage_view(request):
                     bathrooms = form['bathrooms'],
                     house_type = form['housetype'],
                     description = form['description'],
-                    image = file_url
                )
-         return HttpResponseRedirect("/")
+               return HttpResponseRedirect("/")
      return render(request, "rentals/index.html", context)
