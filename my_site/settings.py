@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 # DATABSES
 DATABASES = {
-    "default": env.db_url("DATABSE_URL")
+    "default": env.db_url("EXTERNAL_DATABSE_URL")
 }
 
 # Password validation
