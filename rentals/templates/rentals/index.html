@@ -206,28 +206,6 @@
                             </ul>
                         </aside>
                     </div>
-                    {% for prop in properties%}
-                    <div class="card">
-                        <figure class="card__image">
-                            <img src="{% static 'resources/card_6.png' %}" alt="a house" height="150px" width="150px">
-                        </figure>
-                        <div class="card__info">
-                            <p class="card__address">
-                                {{ prop.city }}, {{ prop.address }}
-                                <br>{{ prop.state }}
-                            </p>
-                            <p class="card__room">{{ prop.room_type }} Room</p>
-                            <p class="card__price">${{ prop.price }}/Month</p>
-                        </div>
-                        <aside class="card__icons">
-                            <ul>                                
-                                <li><i class="material-symbols-outlined subscript">bed</i><span class="card__bedroom">{{ prop.bedrooms }}</span></li>
-                                <li><i class="material-symbols-outlined subscript">shower</i><span class="card__bathroom">{{ prop.bathrooms }}</span></li>
-                                <li><i class="material-symbols-outlined subscript">tag</i><span class="card__housetype">{{ prop.house_type }}</span></li>
-                            </ul>
-                        </aside>
-                    </div>
-                    {% endfor %}
             </article>
             <article class="properties__navigation">
                 <ul>

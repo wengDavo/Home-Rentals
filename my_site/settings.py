@@ -9,9 +9,8 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import os
+
 import environ
-import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -19,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ENV
 env = environ.Env()
-environ.Env.read_env()
+environ.Env.read_env(BASE_DIR / '.env')
 
 # SECURITY WARNING: 
 # keep the secret key used in production secret!
@@ -77,12 +76,12 @@ TEMPLATES = [
 # WSGI->WebServiceGatewayInterface
 WSGI_APPLICATION = 'my_site.wsgi.application'
 
-
-# POSTRGREs-DATABSE
 DATABASES = {
-    "default": dj_database_url.parse(env('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -119,8 +118,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-
-# Base URL to serve media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / '/media/'
